@@ -10,6 +10,10 @@ import com.deepanshu.feedbacksystem.feedbacksystem.utility.Hashing;
 @Entity
 public class Teacher {
 		
+	@Override
+	public String toString() {
+		return "Teacher [id=" + id + ", name=" + name + ", password=" + password + "]";
+	}
 	@Id
 	private String id;
 	private String name;

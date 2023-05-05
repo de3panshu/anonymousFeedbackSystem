@@ -11,10 +11,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.deepanshu.feedbacksystem.feedbacksystem.entities.Teacher;
 import com.deepanshu.feedbacksystem.feedbacksystem.services.TeacherService;
 
+@RestController
 public class TeacherController {
 	
 	@Autowired
@@ -32,10 +34,10 @@ public class TeacherController {
 	}
 	
 	@GetMapping("/teachers/{teacherId}")
-	public Teacher getTeacher(@PathVariable String TeacherId)
+	public Teacher getTeacher(@PathVariable String teacherId)
 	{
 //		System.err.println("Running: getSpecific Teacher");
-		return this.teacherService.getTeacher(TeacherId);
+		return this.teacherService.getTeacher(teacherId);
 	}
 	
 	@PostMapping("/teachers")

@@ -49,14 +49,15 @@ public class TeacherServiceImpl implements TeacherService {
 	public Teacher isValidTeacher(Teacher suspect) {
 		Teacher target = null; 
 		target = this.getTeacher(suspect.getId());
-		if(target == null)
+		if(target == null) {
 			return null;
+		}
 		try {
-			if(Hashing.hashing(suspect.getPassword()).equals(target.getPassword()))
+			if(suspect.getPassword().equals(target.getPassword()))
+			{
 				return target;
-			
-		
-		} catch (NoSuchAlgorithmException e) {
+			}
+		} catch (	Exception e) {
 			e.printStackTrace();
 		}
 		return null;
