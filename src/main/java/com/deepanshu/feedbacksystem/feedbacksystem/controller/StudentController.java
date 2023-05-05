@@ -30,6 +30,7 @@ public class StudentController {
 	@GetMapping("/students/{studentId}")
 	public Student getStudent(@PathVariable String studentId)
 	{
+//		System.err.println("Running: getSpecific student");
 		return this.studentService.getStudent(studentId);
 	}
 	
@@ -48,12 +49,12 @@ public class StudentController {
 		
 	}
 	
-	@PutMapping("/courses")
+	@PutMapping("/students")
 	public ResponseEntity<HttpStatus> updateStudent(@RequestBody Student updatedStudentInfo)
 	{
 		try
 		{
-			this.studentService.updateStudentt(updatedStudentInfo);
+			this.studentService.updateStudent(updatedStudentInfo);
 			return new ResponseEntity<>(HttpStatus.OK);
 		}
 		catch(Exception ex)
@@ -64,7 +65,7 @@ public class StudentController {
 	}
 	
 	@DeleteMapping("/students/{studentId}")
-	public ResponseEntity<HttpStatus> deleteStudent(@RequestBody String studentId)
+	public ResponseEntity<HttpStatus> deleteStudent(@PathVariable String studentId)
 	{
 		try
 		{

@@ -22,7 +22,7 @@ public class StudentServiceImpl implements StudentService {
 
 	@Override
 	public Student getStudent(String studentId) {
-		return studentDao.getReferenceById(studentId);
+		return studentDao.findById(studentId).get();
 	}
 
 	@Override
@@ -31,12 +31,12 @@ public class StudentServiceImpl implements StudentService {
 	}
 
 	@Override
-	public Student updateStudentt(Student updatedStudent) {
+	public Student updateStudent(Student updatedStudent) {
 		return studentDao.save(updatedStudent);
 	}
 	@Override
 	public void removeStudent(String studentId) {
-		Student targetStudent = studentDao.getReferenceById(studentId);
+		Student targetStudent = this.getStudent(studentId);
 		studentDao.delete(targetStudent);
 	}
 	

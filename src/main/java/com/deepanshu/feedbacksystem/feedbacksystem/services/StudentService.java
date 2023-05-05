@@ -12,7 +12,7 @@ public interface StudentService {
 
 	public Student addStudent(Student newStudent);
 
-	public Student updateStudentt(Student updatedStudent);
+	public Student updateStudent(Student updatedStudent);
 
 	public void removeStudent(String studentId);
 }
