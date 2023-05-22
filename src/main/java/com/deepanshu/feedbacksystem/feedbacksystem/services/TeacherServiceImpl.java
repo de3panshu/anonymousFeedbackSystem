@@ -1,6 +1,6 @@
 package com.deepanshu.feedbacksystem.feedbacksystem.services;
 
-import java.security.NoSuchAlgorithmException;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import com.deepanshu.feedbacksystem.feedbacksystem.dao.TeacherDao;
 import com.deepanshu.feedbacksystem.feedbacksystem.entities.Teacher;
-import com.deepanshu.feedbacksystem.feedbacksystem.utility.Hashing;
 
 @Service
 public class TeacherServiceImpl implements TeacherService {

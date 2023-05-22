@@ -7,9 +7,9 @@ import com.deepanshu.feedbacksystem.feedbacksystem.entities.Course;
 public interface CourseService {
 	
 	List<Course> getAllCourseList();
-	public Course getCourse(int courseId);
+	public Course getCourse(String courseId);
 	public Course addCourse(Course newCourse);
 	public Course updateCourse(Course updatedCourse);
-	public void removeCourse(int courseId);
+	public void removeCourse(String courseId);
 	
 }

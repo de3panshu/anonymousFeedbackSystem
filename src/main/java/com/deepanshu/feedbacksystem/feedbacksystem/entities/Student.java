@@ -9,12 +9,11 @@ public class Student {
 
 	public Student() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	@Id
 	private String universityRno;
 	
-	private int classId;
+	private String classId;
 	
 	private int feedbackStatus;
 	
@@ -26,10 +25,10 @@ public class Student {
 	public void setUniversityRno(String universityRno) {
 		this.universityRno = universityRno;
 	}
-	public int getClassId() {
+	public String getClassId() {
 		return classId;
 	}
-	public void setClassId(int classId) {
+	public void setClassId(String classId) {
 		this.classId = classId;
 	}
 	public int getFeedbackStatus() {
@@ -49,7 +48,7 @@ public class Student {
 		return "Student [universityRno=" + universityRno + ", classId=" + classId + ", feedbackStatus=" + feedbackStatus
 				+ ", registered=" + registered + "]";
 	}
-	public Student(String universityRno, int classId, int feedbackStatus, int registered) {
+	public Student(String universityRno, String classId, int feedbackStatus, int registered) {
 		super();
 		this.universityRno = universityRno;
 		this.classId = classId;

@@ -14,70 +14,72 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.deepanshu.feedbacksystem.feedbacksystem.entities.Student;
-import com.deepanshu.feedbacksystem.feedbacksystem.services.StudentService;
+import com.deepanshu.feedbacksystem.feedbacksystem.entities.Class;
+import com.deepanshu.feedbacksystem.feedbacksystem.services.ClassService;
 
-@RestController
+@RestController	
 
 @CrossOrigin(origins = "http://localhost:3000")
-public class StudentController {
+public class ClassController {
+
+	@Autowired
+	private ClassService classService;
 	
-	@Autowired	
-	private StudentService studentService;
-	
-	@GetMapping("/students")
-	public List<Student> getAllStudent()
-	{
-		return this.studentService.getAllStudent();
-	}
-	
-	@GetMapping("/students/{studentId}")
-	public Student getStudent(@PathVariable String studentId)
-	{
-//		System.err.println("Running: getSpecific student");
-		return this.studentService.getStudent(studentId);
-	}
-	
-	@PostMapping("/students")
-	public ResponseEntity<HttpStatus> addStudent(@RequestBody Student newStudent) 
-	{
-		try
-		{
-			this.studentService.addStudent(newStudent);
-			return new ResponseEntity<>(HttpStatus.OK);
-		}
-		catch(Exception ex)
-		{
-			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-		}
+	public ClassController() {
 		
 	}
 	
-	@PutMapping("/students")
-	public ResponseEntity<HttpStatus> updateStudent(@RequestBody Student updatedStudentInfo)
+	@GetMapping("/classes")
+	public List<Class> getAllClass()
 	{
-		try
-		{
-			this.studentService.updateStudent(updatedStudentInfo);
-			return new ResponseEntity<>(HttpStatus.OK);
-		}
-		catch(Exception ex)
-		{
-			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-		}
-		
+		return this.classService.getAllClassList();
 	}
 	
-	@DeleteMapping("/students/{studentId}")
-	public ResponseEntity<HttpStatus> deleteStudent(@PathVariable String studentId)
+	@GetMapping("/classes/{classId}")
+	public Class getClass(@PathVariable String classId)
+	{
+		return this.classService.getClass(classId);
+	}
+	
+	@PostMapping("/classes")
+	public ResponseEntity<HttpStatus> addClass(@RequestBody Class newClass)
 	{
 		try
 		{
-			this.studentService.removeStudent(studentId);
+			this.classService.addClass(newClass);
 			return new ResponseEntity<>(HttpStatus.OK);
 		}
 		catch(Exception ex)
 		{
+			ex.printStackTrace();
+			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+	}
+	@PutMapping("/classes")
+	public ResponseEntity updateClass(@RequestBody Class updatedClass)
+	{
+		try
+		{
+			this.classService.updateClass(updatedClass);
+			return new ResponseEntity<>(HttpStatus.OK);
+		}
+		catch(Exception ex)
+		{
+			ex.printStackTrace();
+			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+	}
+	@DeleteMapping("/classes/{classId}")
+	public ResponseEntity deleteClass(@PathVariable String classId)
+	{
+		try
+		{
+			this.classService.deleteClass(classId);
+			return new ResponseEntity<>(HttpStatus.OK);
+		}
+		catch(Exception ex)
+		{
+			ex.printStackTrace();
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}

@@ -52,7 +52,7 @@ public class Teacher {
 	}
 	public Teacher() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 	
 	

@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.deepanshu.feedbacksystem.feedbacksystem.services.StudentService;
 import com.deepanshu.feedbacksystem.feedbacksystem.dao.StudentDao;
 import com.deepanshu.feedbacksystem.feedbacksystem.entities.Student;
 

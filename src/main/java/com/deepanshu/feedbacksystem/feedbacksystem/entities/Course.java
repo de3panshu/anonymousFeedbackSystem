@@ -7,12 +7,12 @@ import javax.persistence.Id;
 public class Course {
 	
 	@Id
-	private int id;
+	private String id;
 	private String name;
-	public int getId() {
+	public String getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -25,14 +25,14 @@ public class Course {
 	public String toString() {
 		return "Course [id=" + id + ", name=" + name + "]";
 	}
-	public Course(int id, String name) {
+	public Course(String id, String name) {
 		super();
 		this.id = id;
 		this.name = name;
 	}
 	public Course() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 	
 

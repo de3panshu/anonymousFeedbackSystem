@@ -24,8 +24,8 @@ public class CourseServiceImpl implements CourseService {
 	}
 
 	@Override
-	public Course getCourse(int courseId) {
-		return courseDao.findById(courseId);
+	public Course getCourse(String courseId) {
+		return courseDao.findById(courseId).get();
 	}
 
 	@Override
@@ -39,7 +39,7 @@ public class CourseServiceImpl implements CourseService {
 	}
 
 	@Override
-	public void removeCourse(int courseId) {
+	public void removeCourse(String courseId) {
 		Course target = this.getCourse(courseId);
 		courseDao.delete(target);
 	}
