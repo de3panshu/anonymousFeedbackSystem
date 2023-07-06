@@ -1,0 +1,47 @@
+[33mcommit 4f3aa669fd78aa54fde8defad448818c7d99afdc[m[33m ([m[1;36mHEAD -> [m[1;32mtesting[m[33m)[m
+Author: de3panshu <sahu.deeepanshu.united@gmail.com>
+Date:   Sat Jun 3 19:11:28 2023 +0530
+
+    Backend completed
+
+[33mcommit 833e6cd4436b6a386abaa88bd05edee8204b7a8d[m[33m ([m[1;32mmain[m[33m)[m
+Author: de3panshu <sahu.deeepanshu.united@gmail.com>
+Date:   Mon May 22 20:50:39 2023 +0530
+
+    all done switching to new idea
+
+[33mcommit a614dea75f0e4cc981cda968f69fa1ab37e6d5c7[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: de3panshu <sahu.deeepanshu.united@gmail.com>
+Date:   Mon May 15 12:24:28 2023 +0530
+
+    added the course entity
+
+[33mcommit dd91e07b222e1f8f7d0ac4d6b5327157d37c408c[m
+Author: de3panshu <sahu.deeepanshu.united@gmail.com>
+Date:   Fri May 5 21:36:56 2023 +0530
+
+    Teacher entity is tested, minor errors are rectified
+
+[33mcommit 74fe76ee311405e6cc8168109a093211072dd113[m
+Author: de3panshu <sahu.deeepanshu.united@gmail.com>
+Date:   Fri May 5 21:04:34 2023 +0530
+
+    Teacher entity wth controller is created and need to be tested
+
+[33mcommit 75bfc18feb2b5eec24cf18ed8066ac61fa3789cd[m
+Author: de3panshu <sahu.deeepanshu.united@gmail.com>
+Date:   Fri May 5 13:39:00 2023 +0530
+
+    testing done, removed minor flaws
+
+[33mcommit fd7079f1e94f37e186bdd5b29610ed612ca5fb99[m
+Author: de3panshu <sahu.deeepanshu.united@gmail.com>
+Date:   Wed May 3 23:10:03 2023 +0530
+
+    Student Enitity with controller created and need to be tested
+
+[33mcommit 46eaaae006923a5f10f49e483f48716ff5af6a59[m
+Author: de3panshu <sahu.deeepanshu.united@gmail.com>
+Date:   Wed May 3 17:02:31 2023 +0530
+
+    initial setup done
